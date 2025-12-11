@@ -1,34 +1,26 @@
-127.0.0.1 - - [11/Dec/2025 22:16:38] "GET /api/stats HTTP/1.1" 200 -
-[2025-12-11 22:16:38.825300] Request to start monitoring received.
-[2025-12-11 22:16:38.825591] Sniffer thread started
-[2025-12-11 22:16:38.825616] Starting monitoring loop thread.
-127.0.0.1 - - [11/Dec/2025 22:16:38] "POST /api/start HTTP/1.1" 200 -
-[2025-12-11 22:16:38.838944] Bound to interface: wlan0
-[2025-12-11 22:16:38.842471] Promiscuous mode ENABLED on wlan0
-[2025-12-11 22:16:38.842496] Socket created successfully. Loop starting.
-127.0.0.1 - - [11/Dec/2025 22:16:39] "GET /api/stats HTTP/1.1" 200 -
-127.0.0.1 - - [11/Dec/2025 22:16:40] "GET /api/stats HTTP/1.1" 200 -
-127.0.0.1 - - [11/Dec/2025 22:16:41] "GET /api/stats HTTP/1.1" 200 -
-127.0.0.1 - - [11/Dec/2025 22:16:42] "GET /api/stats HTTP/1.1" 200 -
-127.0.0.1 - - [11/Dec/2025 22:16:43] "GET /api/stats HTTP/1.1" 200 -
-127.0.0.1 - - [11/Dec/2025 22:16:44] "GET /api/stats HTTP/1.1" 200 -
-127.0.0.1 - - [11/Dec/2025 22:16:45] "GET /api/stats HTTP/1.1" 200 -
-127.0.0.1 - - [11/Dec/2025 22:16:46] "GET /api/stats HTTP/1.1" 200 -
-127.0.0.1 - - [11/Dec/2025 22:16:47] "GET /api/stats HTTP/1.1" 200 -
-127.0.0.1 - - [11/Dec/2025 22:16:48] "GET /api/stats HTTP/1.1" 200 -
-127.0.0.1 - - [11/Dec/2025 22:16:49] "GET /api/stats HTTP/1.1" 200 -
-127.0.0.1 - - [11/Dec/2025 22:16:50] "GET /api/stats HTTP/1.1" 200 -
-127.0.0.1 - - [11/Dec/2025 22:16:51] "GET /api/stats HTTP/1.1" 200 -
-127.0.0.1 - - [11/Dec/2025 22:16:52] "GET /api/stats HTTP/1.1" 200 -
-127.0.0.1 - - [11/Dec/2025 22:16:53] "GET /api/stats HTTP/1.1" 200 -
-127.0.0.1 - - [11/Dec/2025 22:16:54] "GET /api/stats HTTP/1.1" 200 -
-127.0.0.1 - - [11/Dec/2025 22:16:55] "GET /api/stats HTTP/1.1" 200 -
-127.0.0.1 - - [11/Dec/2025 22:16:56] "GET /api/stats HTTP/1.1" 200 -
-[2025-12-11 22:16:57.089424] Request to stop monitoring.
-127.0.0.1 - - [11/Dec/2025 22:16:57] "POST /api/stop HTTP/1.1" 200 -
-[2025-12-11 22:16:57.266039] Sniffer stopped.
-127.0.0.1 - - [11/Dec/2025 22:17:00] "GET /api/stats HTTP/1.1" 200 -
-127.0.0.1 - - [11/Dec/2025 22:17:00] "OPTIONS /api/block HTTP/1.1" 200 -
-127.0.0.1 - - [11/Dec/2025 22:17:00] "POST /api/block HTTP/1.1" 200 -
-127.0.0.1 - - [11/Dec/2025 22:17:03] "GET /api/stats HTTP/1.1" 200 -
-127.0.0.1 - - [11/Dec/2025 22:17:06] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [11/Dec/2025 22:52:41] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [11/Dec/2025 22:52:44] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [11/Dec/2025 22:52:47] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [11/Dec/2025 22:52:50] "GET /api/stats HTTP/1.1" 200 -
+[2025-12-11 22:52:52.034312] Request to start monitoring received.
+[2025-12-11 22:52:52.034647] Sniffer thread started
+[2025-12-11 22:52:52.034676] Starting monitoring loop thread.
+127.0.0.1 - - [11/Dec/2025 22:52:52] "POST /api/start HTTP/1.1" 200 -
+[2025-12-11 22:52:52.056996] Bound to interface: wlan0
+[2025-12-11 22:52:52.060958] Promiscuous mode ENABLED on wlan0
+[2025-12-11 22:52:52.060983] Socket created successfully. Loop starting.
+127.0.0.1 - - [11/Dec/2025 22:52:53] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [11/Dec/2025 22:52:54] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [11/Dec/2025 22:52:55] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [11/Dec/2025 22:52:56] "GET /api/stats HTTP/1.1" 200 -
+[2025-12-11 22:52:56.602087] Request to stop monitoring.
+127.0.0.1 - - [11/Dec/2025 22:52:56] "POST /api/stop HTTP/1.1" 200 -
+[2025-12-11 22:52:56.679987] Sniffer stopped.
+127.0.0.1 - - [11/Dec/2025 22:52:59] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [11/Dec/2025 22:53:01] "OPTIONS /api/block HTTP/1.1" 200 -
+127.0.0.1 - - [11/Dec/2025 22:53:01] "POST /api/block HTTP/1.1" 200 -
+127.0.0.1 - - [11/Dec/2025 22:53:02] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [11/Dec/2025 22:53:05] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [11/Dec/2025 22:53:08] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [11/Dec/2025 22:53:11] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [11/Dec/2025 22:53:14] "GET /api/stats HTTP/1.1" 200 -

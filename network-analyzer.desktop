@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Network Analyzer
+Comment=Suspicious Traffic Monitor
+Exec=/home/kratos/Документы/zadaniya/tex_zadanie_z_1/start_frontend.sh
+Icon=utilities-terminal
+Terminal=false
+Categories=Network;Security;
+X-GNOME-Autostart-enabled=true

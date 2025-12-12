@@ -1,0 +1,13 @@
+[Unit]
+Description=Network Analyzer Backend Service
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/home/kratos/Документы/zadaniya/tex_zadanie_z_1
+ExecStart=/usr/bin/python3 /home/kratos/Документы/zadaniya/tex_zadanie_z_1/server.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

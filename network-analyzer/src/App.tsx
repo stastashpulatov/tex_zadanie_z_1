@@ -44,27 +44,7 @@ function App() {
 
         if (data.packets.length > 0) {
           // Filter for TRULY new packets only
-          const incoming = data.packets; // Newest first usually? 
-          // Wait, reverse() makes it oldest first if standard? 
-          // Python sends [-50:], so index 0 is oldest, 49 is newest.
-          // reverse() makes 0 newest.
-
-          // We only add packets that are newer than what we have/seen?
-          // Actually, since backend sends the *last 50 buffer*, we might get duplicates.
-          // We should filter against the latest ID we've seen.
-
-          // Update our high-water mark
-          // Add to queue (Oldest to newest for FIFO?)
-          // If we reversed it, newPackets[0] is newest.
-          // We want to show them in order of arrival?
-          // If we want "stream in", we want to see the "slightly old" then "newer" then "newest".
-          // So we should process Chronologically (Old -> New).
-
-          // So:
-          // 1. Filter incoming (which is Old -> New) against lastFetchedId.
-          // 2. Add remaining to queue.
-          // 3. Consumer shifts (takes oldest) and adds to Top of List?
-          // Wait, if we add oldest to top, we get reverse chrono list (Newest Top). Yes.
+          const incoming = data.packets;
 
           // Re-fetching logic:
           const sortedNew = incoming.sort((a: Packet, b: Packet) => a.id - b.id);
@@ -87,6 +67,13 @@ function App() {
 
   // 2. Ticker Animation (Consumer)
   useEffect(() => {
+    // Request notification permission on start
+    if ("Notification" in window && Notification.permission !== "granted") {
+      Notification.requestPermission();
+    }
+  }, []);
+
+  useEffect(() => {
     if (!isRunning) return;
 
     const ticker = setInterval(() => {
@@ -104,6 +91,19 @@ function App() {
           // Check if we already have this ID to avoid duplication from repeated API polls
           if (prev.some(p => p.id === nextPacket.id)) {
             return prev;
+          }
+
+          // NOTIFICATION LOGIC
+          if (nextPacket.threats && nextPacket.threats.length > 0) {
+            if (Notification.permission === "granted") {
+              // Simple debounce: check if we notified recently? 
+              // For now, let's notify for every unique suspicious packet found in the *ticker*
+              // To avoid spam, maybe we can rely on system grouping or just let it be alert-heavy as requested.
+              new Notification(`⚠️ Suspicious Activity Detected!`, {
+                body: `Source: ${nextPacket.src_ip}\nThreat: ${nextPacket.threats.join(', ')}`,
+                icon: '/shield-warning.png' // Optional icon if available
+              });
+            }
           }
 
           // Add to top, keep max 50 visible

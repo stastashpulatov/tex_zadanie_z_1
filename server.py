@@ -2,7 +2,7 @@ import http.server
 import sys
 import socketserver
 import json
-from main import traffic_manager
+from traffic_manager import traffic_manager
 import threading
 import time
 from datetime import datetime
@@ -110,7 +110,7 @@ class TrafficRequestHandler(http.server.BaseHTTPRequestHandler):
         while traffic_manager.is_running:
             # Process multiple packets to keep up with traffic
             processed = False
-            for _ in range(50): # Process up to 50 packets per tick
+            for _ in range(200): # Process up to 200 packets per tick
                 packet, _ = traffic_manager.process_packet()
                 if packet:
                     processed = True
@@ -120,7 +120,7 @@ class TrafficRequestHandler(http.server.BaseHTTPRequestHandler):
             if not processed:
                 time.sleep(0.1) # Sleep if no traffic to save CPU
             else:
-                time.sleep(0.01) # Short sleep to yield
+                time.sleep(0.005) # Short sleep to yield
 
 def run_server():
     # Manual start only

@@ -36,7 +36,7 @@ fi
 echo "💻 Starting Frontend..."
 cd network-analyzer
 export SKIP_PY_BACKEND=true
-npm run dev:electron
+npm run start:prod
 
 # 4. Cleanup on exit
 echo "🛑 Stopping Backend..."

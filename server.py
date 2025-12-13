@@ -28,7 +28,7 @@ class TrafficRequestHandler(http.server.BaseHTTPRequestHandler):
             response = {
                 'stats': traffic_manager.stats,
                 'blocked_ips': list(traffic_manager.blocked_ips),
-                'packets': traffic_manager.packets_buffer[-200:] # Sending last 200 packets
+                'packets': list(traffic_manager.packets_buffer)[-200:] # Convert deque to list before slicing
             }
             self.wfile.write(json.dumps(response).encode('utf-8'))
         else:

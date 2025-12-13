@@ -10,7 +10,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "electron": "wait-on tcp:5173 && cross-env NODE_ENV=development electron .",
-    "dev:electron": "concurrently -k \"npm run dev\" \"npm run electron\""
+    "dev:electron": "concurrently -k \"npm run dev\" \"npm run electron\"",
+    "start:prod": "cross-env NODE_ENV=production electron ."
   },
   "dependencies": {
     "react": "^19.2.0",

@@ -19,7 +19,7 @@ class TrafficManager:
         self.port_scan_counter = defaultdict(set)
         self.last_cleanup = time.time()
         self.settings = {
-            'max_packet_size': 1500,
+            'max_packet_size': 20,
             'check_suspicious_ports': True,
             'ddos_protection': True,
             'scan_detection': True

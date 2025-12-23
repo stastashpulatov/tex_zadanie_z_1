@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/home/kratos/Документы/zadaniya/tex_zadanie_z_1/server.py", line 139, in <module>
+    run_server()
+    ~~~~~~~~~~^^
+  File "/home/kratos/Документы/zadaniya/tex_zadanie_z_1/server.py", line 134, in run_server
+    with ReusableTCPServer(("", PORT), TrafficRequestHandler) as httpd:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/socketserver.py", line 457, in __init__
+    self.server_bind()
+    ~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/socketserver.py", line 478, in server_bind
+    self.socket.bind(self.server_address)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 98] Address already in use
